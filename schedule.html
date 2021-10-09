@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="schedule.css">
+    <title>Request Appointment Form</title>
+
+  </head>
+
+  <body>
+  
+    <!-- Navigation -->
+    
+    <!-- Appointment Request Form-->
+    <div class="form">
+      <div class="title">Appointment Request Form</div>
+        <div class="content">
+        <form action="https://formsubmit.co/malik.fox17@gmail.com" method="POST" id="form">
+        <div class="userInfo">
+
+            <!-- Full Name -->
+            <div class="form-input">
+              <span class="details">Full Name</span>
+              <input type="text" name="name" id="name" placeholder="Enter First and Last Name" required>
+            </div>
+
+            <!-- Phone # -->
+            <div class="form-input">
+              <span class="details">Phone Number</span>
+              <input type="tel" name="tel" id="tel" placeholder="Enter Best Reached #"required> 
+            </div>
+            <!-- Email Address -->
+            <div class="form-input">
+              <span class="details">Email</span>
+              <input type="email" name="email" placeholder="Enter Email Address">
+            </div>
+  
+            <!-- Requested Month/Day -->
+            <div class="form-input">
+              <span class="details">Requested Date</span>
+              <input type="date" name="date" id="date" required>
+            </div>
+            <!-- Requested Time -->
+            <div class="form-input">
+            <span class="details">Requested Time</span>
+            <input type="time" name="time" id="time" required>
+            </div>
+            <!--Pre-set Design-->
+            <div class="form-input">
+              <span class="details">Pre-set Design?</span>
+              <input type="text" name="pre-design" id="pre-design" placeholder="Yes or No" required>
+              </div>
+            </div>
+            <div class="button"> 
+              <input type="submit" value="Submit"> 
+            </div>
+          </form>
+        </div>
+      </div>
+      </form>
+    </div>
+    <script src="schedule.js"></script>
+  </body>
+</html>
