@@ -3,16 +3,10 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: "Poppins";
 }
 
 body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
   background-color: #141114;
   background-image: linear-gradient(335deg, black 23px, transparent 23px),
     linear-gradient(155deg, black 23px, transparent 23px),
@@ -20,52 +14,31 @@ body {
     linear-gradient(155deg, black 23px, transparent 23px);
   background-size: 58px 58px;
   background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+  font-family: sans-serif;
+  font-size: 20px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
 }
 
-/* Style the links inside the sidenav */
-#mySidenav a {
-  position: absolute; /* Position them relative to the browser window */
-  left: -80px; /* Position them outside of the screen */
-  transition: 0.3s; /* Add transition on hover */
-  padding: 15px; /* 15px padding */
-  width: 200px; /* Set a specific width */
-  text-decoration: none; /* Remove underline */
-  font-size: 20px; /* Increase font size */
-  color: white; /* White text color */
-  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+a {
+  text-decoration: none;
 }
 
-#mySidenav a:hover {
-  left: 0; /* On mouse-over, make the elements appear as they should */
-}
+/****************************
+*    FORM CONTENT 
+******************************/
 
-/* The about link: 20px from the top with a green background */
-#home {
-  top: 20px;
-  background-color: #e20000;
-}
-
-#schedule {
-  top: 240px;
-  background-color: #e20000; /* Blue */
-}
-
-#gallery {
-  top: 540px;
-  background-color: #e20000; /* Red */
-}
-
-#testimonies {
-  top: 760px;
-  background-color: #e20000; /* Light Black */
-}
 .form {
   max-width: 700px;
   width: 100%;
-  background-color: gray;
+  background-color: #e20000;
   padding: 25px 30px;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  top: 250px;
+  left: 600px;
 }
 
 .form .title {
@@ -82,7 +55,7 @@ body {
   height: 3px;
   width: 30px;
   border-radius: 5px;
-  background: linear-gradient(to right, rgb(240, 242, 240), rgb(0, 12, 64));
+  background: linear-gradient(to right, #eeeeee, #ea0909);
 }
 
 .content form .userInfo {
@@ -148,16 +121,6 @@ form .choices label .dot {
   transition: all 0.3s ease;
 }
 
-#dot-1:checked ~ .choices label .one,
-#dot-2:checked ~ .choices label .two {
-  background: #9b59b6;
-  border-color: #d9d9d9;
-}
-
-form input[type="radio"] {
-  display: none;
-}
-
 form .button {
   height: 45px;
   margin: 35px 0;
@@ -178,7 +141,7 @@ form .button input {
 
 form .button input:hover {
   /* transform: scale(0.99); */
-  background: linear-gradient(to right, rgb(240, 242, 240), #9b59b6);
+  background: linear-gradient(to right, #eeeeee, #ea0909);
 }
 
 /*
@@ -210,4 +173,62 @@ form .button input:hover {
   .container .content .category {
     flex-direction: column;
   }
+}
+
+/* Navagation */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+a:hover {
+  color: black;
+}
+
+a:active {
+  color: black;
+}
+
+.container {
+  top: 50px;
+  right: 500px;
+  position: absolute;
+}
+
+.selector {
+  padding: 0.25rem;
+  background-color: red;
+  width: min-content;
+  border-radius: 12px;
+  position: relative;
+}
+.selector-item {
+  white-space: nowrap;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  z-index: 2;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.selector-item--active {
+  color: red;
+}
+.highlight {
+  background-color: purple;
+  border-radius: 8px;
+  position: absolute;
+  left: 0.25rem;
+  width: 4.75rem;
+  height: 2.6rem;
+  z-index: 1;
+  box-shadow: 0px 0px 12px -2px #ff8886;
+  transition: left 0.2s ease, width 0.2s ease;
 }
