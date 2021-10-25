@@ -14,47 +14,65 @@ body {
   background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
 }
 h1 {
-  color: #6ab04c;
+  color: #df00fe;
 }
 /****************************
 *    NAVAGATION CONTENT 
 ******************************/
-/* Style the links inside the sidenav */
-#mySidenav a {
-  position: absolute; /* Position them relative to the browser window */
-  left: -80px; /* Position them outside of the screen */
-  transition: 0.3s; /* Add transition on hover */
-  padding: 15px; /* 15px padding */
-  width: 200px; /* Set a specific width */
-  text-decoration: none; /* Remove underline */
-  font-size: 20px; /* Increase font size */
-  color: white; /* White text color */
-  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
-#mySidenav a:hover {
-  left: 0; /* On mouse-over, make the elements appear as they should */
+a:link {
+  color: black;
 }
 
-/* The about link: 20px from the top with a green background */
-#home {
-  top: 20px;
-  background-color: #e20000;
+a:visited {
+  color: black;
+}
+a:hover {
+  color: black;
 }
 
-#schedule {
-  top: 240px;
-  background-color: #e20000; /* Blue */
+a:active {
+  color: black;
+}
+.container {
+  position: relative;
+  left: 230px;
 }
 
-#gallery {
-  top: 540px;
-  background-color: #e20000; /* Red */
+.selector {
+  padding: 0.25rem;
+  background-color: red;
+  width: min-content;
+  border-radius: 12px;
+  position: relative;
+}
+.selector-item {
+  white-space: nowrap;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  z-index: 2;
+  user-select: none;
+  transition: color 0.2s ease;
 }
 
-#testimonies {
-  top: 760px;
-  background-color: #e20000; /* Light Black */
+.selector-item--active {
+  color: red;
+}
+.highlight {
+  background-color: purple;
+  border-radius: 8px;
+  position: absolute;
+  left: 0.25rem;
+  width: 4.75rem;
+  height: 2.6rem;
+  z-index: 1;
+  box-shadow: 0px 0px 12px -2px #ff8886;
+  transition: left 0.2s ease, width 0.2s ease;
 }
 
 /****************************
@@ -62,6 +80,8 @@ h1 {
 ******************************/
 .testimonials {
   text-align: center;
+  position: relative;
+  top: 80px;
 }
 .inner {
   max-width: 1300px;
@@ -105,7 +125,7 @@ h1 {
   margin: 20px 0;
 }
 .stars {
-  color: #6ab04c;
+  color: red;
   margin-bottom: 20px;
 }
 
